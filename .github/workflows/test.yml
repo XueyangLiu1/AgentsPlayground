@@ -1,0 +1,24 @@
+name: Calculator Tests
+
+on:
+  push:
+    paths:
+      - 'calculator/**'
+  pull_request:
+    paths:
+      - 'calculator/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run tests
+        working-directory: calculator
+        run: python -m unittest test_calc.py -v
