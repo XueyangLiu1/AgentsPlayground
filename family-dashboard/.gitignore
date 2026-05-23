@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Data (committed only as .gitkeep)
+data/*
+!data/.gitkeep
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
